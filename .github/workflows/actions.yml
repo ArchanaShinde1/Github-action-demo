@@ -1,22 +1,29 @@
 name: github-actions-workflow
 
+<<<<<<< HEAD
 on:
   # [push]
   schedule:
     - cron : "0/5 * * * *"
+
+      #on: [push, pull_request]
+
 
 jobs:
   run-github-actions:
     runs-on: ubuntu-latest
     steps: 
       - name: Js action
-        uses: actions/hello-world-javascript-action@V1
+        uses: actions/hello-world-javascript-action@v1
         with:
           who-to-greet: Archana
       - name: List of files
-        run:
+        run: |
           pwd
           ls -a
+          echo $GITHUB_SHA
+          echo $GITHUB_REPOSITORY
+          echo "${{ github.token }}"
       - name: JS output
         run: echo "${{steps.greet.outputs.time}}" 
 
