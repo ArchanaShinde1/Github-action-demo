@@ -12,7 +12,7 @@ jobs:
           who-to-greet: Archana
 
       - name: JS output
-        runs: echo "${{steps.greet.outputs.time}}" 
+        run: echo "${{steps.greet.outputs.time}}" 
 
 
 
