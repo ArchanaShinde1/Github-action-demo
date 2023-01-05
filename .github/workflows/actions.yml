@@ -7,9 +7,9 @@ jobs:
     runs-on: ubuntu-latest
     steps: 
       - name: Js action
-        uses: actions/hello-world-javascript-action@master
+        uses: actions/hello-world-javascript-action@V1
         with:
-          who-to-greet: 'Archana'
+          who-to-greet: Archana
 
       - name: JS output
         runs: echo "${{steps.greet.outputs.time}}" 
