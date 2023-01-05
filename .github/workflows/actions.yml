@@ -11,7 +11,7 @@ jobs:
         with:
           who-to-greet: Archana
       - name: List of files
-        run:
+        run: |
           pwd
           ls -a
           echo $GITHUB_SHA
