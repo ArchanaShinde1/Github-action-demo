@@ -10,7 +10,10 @@ jobs:
         uses: actions/hello-world-javascript-action@V1
         with:
           who-to-greet: Archana
-
+      - name: List of files
+        run:
+          pwd
+          ls -a
       - name: JS output
         run: echo "${{steps.greet.outputs.time}}" 
 
