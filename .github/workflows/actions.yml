@@ -1,0 +1,16 @@
+name: github-actions-workflow
+
+jobs:
+  run-github-actions:
+    runs-on: ubuntu-latest
+    steps: 
+      - name: Js action
+        uses: actions/hello-world-javascript-action@master
+        with:
+          who-to-greet: 'Archana'
+
+      - name: JS output
+        runs: echo "${{steps.greet.outputs.time}}" 
+
+
+
