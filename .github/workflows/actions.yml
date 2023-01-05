@@ -11,9 +11,12 @@ jobs:
         with:
           who-to-greet: Archana
       - name: List of files
-        run:
+        run: |
           pwd
           ls -a
+          echo $GITHUB_SHA
+          echo $GITHUB_REPOSITORY
+          echo "${{ github.token }}"
       - name: JS output
         run: echo "${{steps.greet.outputs.time}}" 
 
